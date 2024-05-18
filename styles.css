@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --red:#ff3838;
+}
+*{
+    font-family: 'Poppins';
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+*::selection{
+    background: var(--red);
+    color: white;
+}
+html{
+    scroll-behavior: smooth;
+    font-size: 65.5%;
+    scroll-padding-top: 6rem;
+}
+body{
+    background-color: white;
+}
+header{
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: whitesmoke;
+    padding: .4rem 9%;
+    box-shadow: 0. 5rem 1rem rgba(0, 0, 0, .1);
+}
+header .logo{
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: #00215E;
+}
+.logo .and{
+    color: #DC6B19;
+}
+header .logo i{
+    padding-right: .5rem;
+}
+header .navbar a{
+    font-size: 2rem;
+    margin-left: 2rem;
+    color: #666;
+}
+header .navbar a:hover{
+    color:#00215E;
+}
+#menu-bar{
+    font-size: 2rem;
+    cursor: pointer;
+    color: #333;
+    border: .2rem solid #666;
+    border-radius: .3rem;
+    padding: .5rem 1.5rem;
+    display: none;
+}
+section{
+    padding: 2rem 9%;
+}
+.home{
+    display: flex;
+    flex-wrap: wrap;
+    gap:1.5rem;
+    min-height: 100vh;
+    align-items: center;
+    background: url(top-view-avocado-toast-with-radish-seeds-plate-with-copy-space.jpg) no-repeat ;
+    background-size: cover;
+    background-position: center;
+}
+.home .content{
+    flex: 1 1 40rem;
+    padding-top: 6.5rem;
+}
+.home .image{
+    flex: 1 1 40rem;
+}
+.home .image img{
+    width:100%;
+    padding: 1rem;
+    animation:float 3s linear infinite;
+}
+
+@keyframes float {
+    0%, 100%{
+        transform: translateY(0rem);
+    }
+    50%{
+        transform: translateY(3rem);
+    }
+}
+.home .content p{
+    font-size: 1.7rem;
+    color: #666;
+    padding: 1rem 0;
+}
+.home .content h3{
+    font-size: 3rem;
+    color: #333;
+}
+.btn{
+    display: inline-block;
+    padding:.8rem 3rem;
+    border: .2rem solid #00215E;
+    cursor: pointer;
+    font-size: 1.7rem;
+    border-radius: .5rem;
+    color: #00215E;
+    position:relative;
+    overflow: hidden;
+    z-index: 0;
+    margin-top: 1rem;
+}
+.btn::before{
+    content: '';
+    position: absolute;
+    top: 0; right: 0;
+    width: 0%;
+    height: 100%;
+    background: #00215E;
+    transition: .3s linear;
+    z-index: -1;
+}
+.btn:hover::before{
+    width: 100%;
+    left: 0;
+}
+.btn:hover{
+    color: white;
+}
+.heading{
+    text-align: center;
+    font-size: 4.5rem;
+    padding: 10rem;
+    color: #00215E;
+}
+.heading span{
+    color:#DC6B19;
+}
+.services .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap:1.5rem;
+}
+.services .box-container .box{
+    flex: 1 1 30rem;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 .5rem 1rem black;
+    border:.5rem solid #00215E;
+}
+.services .box-container .box .image{
+    height: 15%;
+    width:15%;
+    object-fit: cover;
+    position: absolute;
+    top: 1%; left:0;
+    margin-left: 150px;
+}
+.services .box-container .box .content1{
+    text-align: center;
+    background-color: white;
+    padding: 7rem;
+}
+.services .box-container .box img{
+    margin:1.5rem 0;
+}
+.services .box-container .box h3{
+    font-size: 2.5rem;
+}
+.services .box-container .box {
+    font-size: 1.5rem;
+}
+.services{
+    background-color: whitesmoke;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+@media(max-width:991px){
+    html{
+        font-size: 55%;
+    }
+    header{
+        padding: .1rem;
+    }
+    section{
+        padding:2rem;
+    }
+}
+@media(max-width:768px){
+    #menu-bar{
+        display: initial;
+    }
+    header .navbar{
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        background:#f7f7f7;
+        border-top: .1rem solid rgba(0, 0, 0, .1);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        display: none;
+    }
+
+    header .navbar.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        display: block;
+    }
+
+    header .navbar a{
+        margin: 1.5rem;
+        padding: 1.5rem;
+        display: block;
+        background: #fff;
+    }
+}
+
+@media(max-width:400px){
+    html{
+        font-size: 50%;
+    }
+}
+
+.footer {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.logo {
+    width: 50px; 
+    height: 75px;
+    margin-bottom: 20px; 
+}
+
+.copyright {
+    margin-top: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+    .logo {
+        width: 100px; 
+    }
+}
+.bakla{
+    text-decoration: none;
+    font-size: 13px;
+}
+.fade-in {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.fade-in.active {
+    opacity: 1;
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="icon" type="images/x-icon" href="12-removebg-preview.png"/>
+    <title>Contact</title>
+</head>
+<body>
+  <a href="homepage.html">
+  <button src="home.png " class="backbutton" type="backbutton">Home</button>
+</a>
+    <div class="container">
+        <div class="text">Contact Us</div>
+        <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+          <div class="form-row">
+            <div class="input-data">
+                <input type="hidden" name="access_key" id="accessKey">
+              <input type="text" name="first_name" required>
+              <div class="underline"></div>
+              <label for="first_name">First Name</label>
+            </div>
+            <div class="input-data">
+              <input type="text" name="last_name" required>
+              <div class="underline"></div>
+              <label for="last_name">Last Name</label>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="input-data">
+              <input type="email" name="email" required>
+              <div class="underline"></div>
+              <label for="email">Email Address</label>
+            </div>
+            <div class="input-data">
+              <input type="text" name="contact_number" required>
+              <div class="underline"></div>
+              <label for="contact_number">Contact Number</label>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="input-data textarea">
+              <textarea rows="8" cols="80" name="message" required></textarea>
+              <div class="underline"></div>
+              <label for="message">Write your message</label>
+            </div>
+          </div>
+          <div class="form-row submit-btn">
+            <div class="input-data">
+              <div class="inner"></div>
+              <input type="submit" value="Submit">
+            </div>
+          </div>
+        </form>
+      </div>
+    <script>
+        document.getElementById('accessKey').value = '89f5fd47-8c21-4a29-a8cc-32cb0584658b';
+    </script>
+</body>
+</html>
